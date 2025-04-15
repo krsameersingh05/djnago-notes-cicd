@@ -13,7 +13,8 @@ RUN apt-get update \
 RUN pip install mysqlclient
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . /app/backend
+COPY requirements.txt manage.py myapp/ /app/backend/
+
 
 EXPOSE 8000
 #RUN python manage.py migrate
